@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		11F0D5B82D64C21A006DFC05 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 11F0D5B72D64C21A006DFC05 /* RxCocoa */; };
+		11F0D5BB2D64C227006DFC05 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 11F0D5BA2D64C227006DFC05 /* SnapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		11F0D59E2D64C1F8006DFC05 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -14,7 +19,7 @@
 		11F0D5B02D64C1F9006DFC05 /* Exceptions for "RxSwiftPractice" folder in "RxSwiftPractice" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Application/Info.plist,
 			);
 			target = 11F0D59D2D64C1F8006DFC05 /* RxSwiftPractice */;
 		};
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F0D5B82D64C21A006DFC05 /* RxCocoa in Frameworks */,
+				11F0D5BB2D64C227006DFC05 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,8 @@
 			);
 			name = RxSwiftPractice;
 			packageProductDependencies = (
+				11F0D5B72D64C21A006DFC05 /* RxCocoa */,
+				11F0D5BA2D64C227006DFC05 /* SnapKit */,
 			);
 			productName = RxSwiftPractice;
 			productReference = 11F0D59E2D64C1F8006DFC05 /* RxSwiftPractice.app */;
@@ -107,6 +116,10 @@
 			);
 			mainGroup = 11F0D5952D64C1F8006DFC05;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				11F0D5B62D64C21A006DFC05 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				11F0D5B92D64C227006DFC05 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 11F0D59F2D64C1F8006DFC05 /* Products */;
 			projectDirPath = "";
@@ -147,10 +160,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W43DLLFB4Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RxSwiftPractice/Info.plist;
+				INFOPLIST_FILE = RxSwiftPractice/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -175,10 +187,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W43DLLFB4Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RxSwiftPractice/Info.plist;
+				INFOPLIST_FILE = RxSwiftPractice/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,6 +346,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11F0D5B62D64C21A006DFC05 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+		11F0D5B92D64C227006DFC05 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11F0D5B72D64C21A006DFC05 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11F0D5B62D64C21A006DFC05 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		11F0D5BA2D64C227006DFC05 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11F0D5B92D64C227006DFC05 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11F0D5962D64C1F8006DFC05 /* Project object */;
 }

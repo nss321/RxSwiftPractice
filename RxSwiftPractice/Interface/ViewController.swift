@@ -6,14 +6,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
-
+    var disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        configView()
+        view.backgroundColor = .systemBackground
     }
-
-
+    func configView() { }
 }
-
