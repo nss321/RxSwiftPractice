@@ -36,15 +36,10 @@ final class PersonTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    private let detailButton: UIButton = {
+    let detailButton: UIButton = {
         let button = UIButton()
         button.configuration = UIButton.Configuration.gray()
         button.configuration?.title = "더보기"
-//        button.configuration
-//        button.setTitle("더보기", for: .normal)
-//        button.setTitleColor(.systemBlue, for: .normal)
-//        button.isUserInteractionEnabled = true
-//        button.backgroundColor = .lightGray
         button.isUserInteractionEnabled = true
         button.layer.cornerRadius = 16
         return button
@@ -106,8 +101,6 @@ final class PersonTableViewCell: UITableViewCell {
                 owner.navigationController?.pushViewController(newVC, animated: true)
             }
             .disposed(by: disposeBag)
-        
-        
     }
 }
 
