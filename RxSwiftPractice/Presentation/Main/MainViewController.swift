@@ -44,6 +44,14 @@ final class MainViewController: ViewController {
         return button
     }()
     
+    private let contactViewButton: UIButton = {
+        let button = UIButton()
+        button.configuration = UIButton.Configuration.filled()
+        button.configuration?.title = "ContactView"
+        button.configuration?.baseBackgroundColor = .tintColor
+        return button
+    }()
+    
     override func bind() {
         simpleTableViewButton.rx.tap
             .subscribe(with: self, onNext: { owner, _ in
@@ -72,6 +80,11 @@ final class MainViewController: ViewController {
                 owner.navigationController?.pushViewController(BirthDayViewController(), animated: true)
             }
             .disposed(by: disposeBag)
+        contactViewButton.rx.tap
+            .bind(with: self) { owner, _ in
+                owner.navigationController?.pushViewController(ContactViewController(), animated: true)
+            }
+            .disposed(by: disposeBag)
     }
     
     override func configView() {
@@ -79,7 +92,8 @@ final class MainViewController: ViewController {
             simpleTableViewButton,
             numbersViewButton,
             simpleValidationViewButton,
-            birthDayViewButton
+            birthDayViewButton,
+            contactViewButton
         ].forEach { view.addSubview($0) }
         
         simpleTableViewButton.snp.makeConstraints {
@@ -97,6 +111,10 @@ final class MainViewController: ViewController {
         birthDayViewButton.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().multipliedBy(1.1)
+        }
+        contactViewButton.snp.makeConstraints{
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().multipliedBy(1.2)
         }
     }
 }
